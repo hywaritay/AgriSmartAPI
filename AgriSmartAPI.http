@@ -1,0 +1,6 @@
+@AgriSmartAPI_HostAddress = http://localhost:5273
+
+GET {{AgriSmartAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
