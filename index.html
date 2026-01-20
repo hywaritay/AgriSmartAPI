@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Checkout</title>
+    <script>
+      function toMinorUnits(amountSLE) {
+        return Math.round(amountSLE * 100);
+      }
+
+      async function startCheckout() {
+        const payload = {
+          name: 'Order #1001',
+          orderId: 'ord_1001',
+          lineItems: [
+            { type: 'custom', name: 'Starter bundle', price: { currency: 'SLE', value: toMinorUnits(1) }, quantity: 1 },
+          ],
+          metadata: { cartId: 'cart_123' },
+          callbackState: 'state_cart_123',
+        };
+
+        const res = await fetch('https://api.monime.io/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        if (!res.ok) {
+          console.error('Checkout failed', await res.text());
+          return;
+        }
+
+        const { redirectUrl } = await res.json();
+        if (redirectUrl) window.location.href = redirectUrl;
+      }
+    </script>
+</head>
+<body>
+    <button onclick="startCheckout()">Start Demo Checkout</button>
+</body>
+</html>

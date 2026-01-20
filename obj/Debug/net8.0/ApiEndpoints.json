@@ -1,107 +1,19 @@
 [
   {
-    "ContainingType": "AgriSmartAPI.Controllers.AnalyticsController",
-    "Method": "AddProductivityData",
-    "RelativePath": "api/analytics/productivity",
+    "ContainingType": "AgriSmartAPI.Controllers.AuthController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/Auth/forgot-password",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "productivity",
-        "Type": "AgriSmartAPI.Models.FarmProductivity",
+        "Name": "model",
+        "Type": "AgriSmartAPI.DTO.ForgotPasswordRequestModel",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.FarmProductivity",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.AnalyticsController",
-    "Method": "GetProductivityData",
-    "RelativePath": "api/analytics/productivity/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.FarmProductivity",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.AnalyticsController",
-    "Method": "GenerateSustainabilityReport",
-    "RelativePath": "api/analytics/sustainability",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "report",
-        "Type": "AgriSmartAPI.Models.SustainabilityReport",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.SustainabilityReport",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.AnalyticsController",
-    "Method": "GetSustainabilityReport",
-    "RelativePath": "api/analytics/sustainability/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.SustainabilityReport",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "AgriSmartAPI.Controllers.AuthController",
@@ -147,6 +59,22 @@
   },
   {
     "ContainingType": "AgriSmartAPI.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Auth/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AgriSmartAPI.DTO.ResetPasswordRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgriSmartAPI.Controllers.AuthController",
     "Method": "SendOtp",
     "RelativePath": "api/Auth/send-otp",
     "HttpMethod": "POST",
@@ -159,42 +87,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.AuthController",
-    "Method": "TestEmail",
-    "RelativePath": "api/Auth/test-email",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "sendOtpModel",
-        "Type": "AgriSmartAPI.DTO.SendOtpModel",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.AuthController",
-    "Method": "TestOtpGeneration",
-    "RelativePath": "api/Auth/test-otp-generation",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.AuthController",
-    "Method": "TestSmtpConnection",
-    "RelativePath": "api/Auth/test-smtp-connection",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -214,191 +106,125 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.FinanceController",
-    "Method": "AddCropInsurance",
-    "RelativePath": "api/finance/insurance",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "insurance",
-        "Type": "AgriSmartAPI.Models.CropInsurance",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.CropInsurance",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.FinanceController",
-    "Method": "GetCropInsurance",
-    "RelativePath": "api/finance/insurance/{id}",
+    "ContainingType": "AgriSmartAPI.Controllers.MarketPlaceController",
+    "Method": "GetCartByUser",
+    "RelativePath": "api/cart/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.CropInsurance",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.FinanceController",
-    "Method": "ApplyForMicroloan",
-    "RelativePath": "api/finance/microloan",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "microloan",
-        "Type": "AgriSmartAPI.Models.Microloan",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.Microloan",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.FinanceController",
-    "Method": "GetMicroloan",
-    "RelativePath": "api/finance/microloan/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.Microloan",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.ImplementationController",
-    "Method": "AddLocalization",
-    "RelativePath": "api/implementation/localization",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "localization",
-        "Type": "AgriSmartAPI.Models.LocalizationContent",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.LocalizationContent",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.ImplementationController",
-    "Method": "GetLocalization",
-    "RelativePath": "api/implementation/localization/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
+        "Name": "userId",
         "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "IsRequired": true
       }
-    ]
+    ],
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.ImplementationController",
-    "Method": "AddPartnership",
-    "RelativePath": "api/implementation/partnership",
+    "ContainingType": "AgriSmartAPI.Controllers.MarketPlaceController",
+    "Method": "AddToCart",
+    "RelativePath": "api/cart/add",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "partnership",
-        "Type": "AgriSmartAPI.Models.Partnership",
+        "Name": "request",
+        "Type": "AgriSmartAPI.Controllers.MarketPlaceController\u002BAddToCartRequest",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.Partnership",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.ImplementationController",
-    "Method": "GetPartnership",
-    "RelativePath": "api/implementation/partnership/{id}",
+    "ContainingType": "AgriSmartAPI.Controllers.MarketPlaceController",
+    "Method": "MakePayment",
+    "RelativePath": "api/cart/pay",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentRequest",
+        "Type": "AgriSmartAPI.Controllers.MarketPlaceController\u002BPaymentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgriSmartAPI.Controllers.MarketPlaceController",
+    "Method": "RemoveFromCart",
+    "RelativePath": "api/cart/remove/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgriSmartAPI.Controllers.MarketPlaceController",
+    "Method": "GetAllCategories",
+    "RelativePath": "api/categories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgriSmartAPI.Controllers.MarketPlaceController",
+    "Method": "AddCategory",
+    "RelativePath": "api/categories/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "form",
+        "Type": "AgriSmartAPI.Controllers.MarketPlaceController\u002BCategoryForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgriSmartAPI.Controllers.CommunityController",
+    "Method": "GetExperts",
+    "RelativePath": "api/community/experts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgriSmartAPI.Controllers.CommunityController",
+    "Method": "AddExpert",
+    "RelativePath": "api/community/experts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "AgriSmartAPI.Controllers.CommunityController\u002BCreateExpertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgriSmartAPI.Controllers.CommunityController",
+    "Method": "GetExpertById",
+    "RelativePath": "api/community/experts/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -409,256 +235,44 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.Partnership",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.ImplementationController",
-    "Method": "ScheduleTraining",
-    "RelativePath": "api/implementation/training",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "training",
-        "Type": "AgriSmartAPI.Models.FarmerTrainingSession",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.FarmerTrainingSession",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.ImplementationController",
-    "Method": "GetTrainingSession",
-    "RelativePath": "api/implementation/training/{id}",
+    "ContainingType": "AgriSmartAPI.Controllers.CommunityController",
+    "Method": "GetForumPosts",
+    "RelativePath": "api/community/forum",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.FarmerTrainingSession",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.InputSupplyController",
-    "Method": "PlaceOrder",
-    "RelativePath": "api/inputsupply/order",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "order",
-        "Type": "AgriSmartAPI.Models.InputOrder",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.InputOrder",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.InputSupplyController",
-    "Method": "GetOrder",
-    "RelativePath": "api/inputsupply/order/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.InputOrder",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.InputSupplyController",
-    "Method": "AddSupplier",
-    "RelativePath": "api/inputsupply/supplier",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "supplier",
-        "Type": "AgriSmartAPI.Models.InputSupplier",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.InputSupplier",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.InputSupplyController",
-    "Method": "GetSupplier",
-    "RelativePath": "api/inputsupply/supplier/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.InputSupplier",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.KnowledgeSharingController",
-    "Method": "SubmitQuestion",
-    "RelativePath": "api/knowledge/expertqa",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "qa",
-        "Type": "AgriSmartAPI.Models.ExpertQA",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.ExpertQA",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.KnowledgeSharingController",
-    "Method": "GetExpertQA",
-    "RelativePath": "api/knowledge/expertqa/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.ExpertQA",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.KnowledgeSharingController",
+    "ContainingType": "AgriSmartAPI.Controllers.CommunityController",
     "Method": "CreateForumPost",
-    "RelativePath": "api/knowledge/forumpost",
+    "RelativePath": "api/community/forum",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "post",
-        "Type": "AgriSmartAPI.Models.ForumPost",
+        "Name": "request",
+        "Type": "AgriSmartAPI.Controllers.CommunityController\u002BCreateForumPostRequest",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.ForumPost",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.KnowledgeSharingController",
-    "Method": "GetForumPost",
-    "RelativePath": "api/knowledge/forumpost/{id}",
+    "ContainingType": "AgriSmartAPI.Controllers.CommunityController",
+    "Method": "GetForumPostById",
+    "RelativePath": "api/community/forum/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -669,22 +283,12 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.ForumPost",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.KnowledgeSharingController",
-    "Method": "AddReply",
-    "RelativePath": "api/knowledge/forumpost/{id}/reply",
+    "ContainingType": "AgriSmartAPI.Controllers.CommunityController",
+    "Method": "AddComment",
+    "RelativePath": "api/community/forum/{id}/comment",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -695,54 +299,18 @@
         "IsRequired": true
       },
       {
-        "Name": "replyRequest",
-        "Type": "AgriSmartAPI.Models.ReplyRequest",
+        "Name": "request",
+        "Type": "AgriSmartAPI.Controllers.CommunityController\u002BAddCommentRequest",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.ForumPost",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.MarketAccessController",
-    "Method": "CreateGroupSale",
-    "RelativePath": "api/market/groupsale",
+    "ContainingType": "AgriSmartAPI.Controllers.CommunityController",
+    "Method": "LikePost",
+    "RelativePath": "api/community/forum/{id}/like",
     "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "groupSale",
-        "Type": "AgriSmartAPI.Models.GroupSale",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.GroupSale",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.MarketAccessController",
-    "Method": "GetGroupSale",
-    "RelativePath": "api/market/groupsale/{id}",
-    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -752,126 +320,28 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.GroupSale",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.MarketAccessController",
-    "Method": "CreateListing",
-    "RelativePath": "api/market/listing",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "listing",
-        "Type": "AgriSmartAPI.Models.MarketplaceListing",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.MarketplaceListing",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.MarketAccessController",
-    "Method": "GetListing",
-    "RelativePath": "api/market/listing/{id}",
+    "ContainingType": "AgriSmartAPI.Controllers.CommunityController",
+    "Method": "GetTutorials",
+    "RelativePath": "api/community/tutorials",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.MarketplaceListing",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.MarketAccessController",
-    "Method": "GetMarketPrice",
-    "RelativePath": "api/market/prices/{cropName}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "cropName",
+        "Name": "query",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.MarketPrice",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.ResourceManagementController",
-    "Method": "CalculateFarmSize",
-    "RelativePath": "api/resources/farmsize",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "farmSize",
-        "Type": "AgriSmartAPI.Models.FarmSize",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.FarmSize",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.ResourceManagementController",
-    "Method": "GetFarmSize",
-    "RelativePath": "api/resources/farmsize/{id}",
+    "ContainingType": "AgriSmartAPI.Controllers.CommunityController",
+    "Method": "GetTutorialById",
+    "RelativePath": "api/community/tutorials/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -882,48 +352,28 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.FarmSize",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.ResourceManagementController",
-    "Method": "CalculateFertilizerPesticide",
-    "RelativePath": "api/resources/fertilizerpesticide",
+    "ContainingType": "AgriSmartAPI.Controllers.CommunityController",
+    "Method": "IncrementTutorialView",
+    "RelativePath": "api/community/tutorials/{id}/view",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "calculation",
-        "Type": "AgriSmartAPI.Models.FertilizerPesticideCalculation",
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.FertilizerPesticideCalculation",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.ResourceManagementController",
-    "Method": "GetFertilizerPesticide",
-    "RelativePath": "api/resources/fertilizerpesticide/{id}",
+    "ContainingType": "AgriSmartAPI.Controllers.CommunityController",
+    "Method": "DownloadTutorial",
+    "RelativePath": "api/community/tutorials/download/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -934,277 +384,120 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.FertilizerPesticideCalculation",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.ResourceManagementController",
-    "Method": "CreateWaterManagement",
-    "RelativePath": "api/resources/watermanagement",
+    "ContainingType": "AgriSmartAPI.Controllers.CommunityController",
+    "Method": "CreateTutorial",
+    "RelativePath": "api/community/tutorials/post",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "waterManagement",
-        "Type": "AgriSmartAPI.Models.WaterManagement",
-        "IsRequired": true
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Duration",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Difficulty",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "VideoFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.WaterManagement",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.ResourceManagementController",
-    "Method": "GetWaterManagement",
-    "RelativePath": "api/resources/watermanagement/{id}",
+    "ContainingType": "AgriSmartAPI.Controllers.MarketPlaceController",
+    "Method": "GetAllProducts",
+    "RelativePath": "api/products",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.WaterManagement",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "Parameters": [],
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.SustainableFarmingController",
-    "Method": "CreateAgroforestryGuide",
-    "RelativePath": "api/sustainablefarming/agroforestry",
+    "ContainingType": "AgriSmartAPI.Controllers.MarketPlaceController",
+    "Method": "AddPlantProduct",
+    "RelativePath": "api/products/add",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "guide",
-        "Type": "AgriSmartAPI.Models.AgroforestryGuide",
-        "IsRequired": true
+        "Name": "ProductName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PricePerKg",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Location",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Supplier",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.AgroforestryGuide",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "AgriSmartAPI.Controllers.SustainableFarmingController",
-    "Method": "GetAgroforestryGuide",
-    "RelativePath": "api/sustainablefarming/agroforestry/{id}",
+    "ContainingType": "AgriSmartAPI.Controllers.MarketPlaceController",
+    "Method": "GetProductsByCategoryId",
+    "RelativePath": "api/products/bycategory/{categoryId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "categoryId",
         "Type": "System.Int32",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.AgroforestryGuide",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.SustainableFarmingController",
-    "Method": "CreateOrganicGuide",
-    "RelativePath": "api/sustainablefarming/organicguide",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "guide",
-        "Type": "AgriSmartAPI.Models.OrganicFarmingGuide",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.OrganicFarmingGuide",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.SustainableFarmingController",
-    "Method": "GetOrganicGuide",
-    "RelativePath": "api/sustainablefarming/organicguide/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.OrganicFarmingGuide",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.TrainingController",
-    "Method": "AddTrainingContent",
-    "RelativePath": "api/training/content",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "content",
-        "Type": "AgriSmartAPI.Models.TrainingContent",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.TrainingContent",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.TrainingController",
-    "Method": "GetTrainingContent",
-    "RelativePath": "api/training/content/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.TrainingContent",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.TrainingController",
-    "Method": "CreateFieldSchool",
-    "RelativePath": "api/training/fieldschool",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "fieldSchool",
-        "Type": "AgriSmartAPI.Models.VirtualFieldSchool",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.VirtualFieldSchool",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AgriSmartAPI.Controllers.TrainingController",
-    "Method": "GetFieldSchool",
-    "RelativePath": "api/training/fieldschool/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "AgriSmartAPI.Models.VirtualFieldSchool",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "AgriSmartAPI.Controllers.CropController",

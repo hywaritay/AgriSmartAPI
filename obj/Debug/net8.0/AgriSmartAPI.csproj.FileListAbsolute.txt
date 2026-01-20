@@ -454,3 +454,5 @@ C:\Users\hywar\Downloads\AgriSmartAPI-main\AgriSmartAPI-main\obj\Debug\net8.0\re
 C:\Users\hywar\Downloads\AgriSmartAPI-main\AgriSmartAPI-main\obj\Debug\net8.0\AgriSmartAPI.pdb
 C:\Users\hywar\Downloads\AgriSmartAPI-main\AgriSmartAPI-main\obj\Debug\net8.0\AgriSmartAPI.genruntimeconfig.cache
 C:\Users\hywar\Downloads\AgriSmartAPI-main\AgriSmartAPI-main\obj\Debug\net8.0\ref\AgriSmartAPI.dll
+C:\Users\LENOVO\Desktop\waritay\Agr Smart\AgriSmartAPI\obj\Debug\net8.0\AgriSmartAPI.sourcelink.json
+C:\Users\LENOVO\Desktop\waritay\Agr Smart\AgriSmartAPI\bin\Debug\net8.0\AgriSmartAPI.staticwebassets.runtime.json

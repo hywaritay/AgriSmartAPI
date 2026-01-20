@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\waritay\\Agr Smart\\AgriSmartAPI\\wwwroot\\images\\19accea18aad4d4ca28e0a69750817b9.jpg",
+      "PackagePath": "staticwebassets\\images\\19accea18aad4d4ca28e0a69750817b9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\waritay\\Agr Smart\\AgriSmartAPI\\wwwroot\\images\\2c4232991d2e4d989a6492f1abbcbba6.jpg",
+      "PackagePath": "staticwebassets\\images\\2c4232991d2e4d989a6492f1abbcbba6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\waritay\\Agr Smart\\AgriSmartAPI\\wwwroot\\images\\2f0359bc888c4dddba5511b2cde0d3b0.jpg",
+      "PackagePath": "staticwebassets\\images\\2f0359bc888c4dddba5511b2cde0d3b0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\waritay\\Agr Smart\\AgriSmartAPI\\wwwroot\\videos\\22cdddf507e442098a0dca4077c3447d.mp4",
+      "PackagePath": "staticwebassets\\videos\\22cdddf507e442098a0dca4077c3447d.mp4"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\waritay\\Agr Smart\\AgriSmartAPI\\wwwroot\\videos\\4632d894f73f4b9689d2ec89ed3f1863.mp4",
+      "PackagePath": "staticwebassets\\videos\\4632d894f73f4b9689d2ec89ed3f1863.mp4"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AgriSmartAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AgriSmartAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.AgriSmartAPI.props",
+      "PackagePath": "build\\AgriSmartAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.AgriSmartAPI.props",
+      "PackagePath": "buildMultiTargeting\\AgriSmartAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.AgriSmartAPI.props",
+      "PackagePath": "buildTransitive\\AgriSmartAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

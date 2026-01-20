@@ -63,11 +63,20 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+var env = app.Services.GetRequiredService<IWebHostEnvironment>();
+var videosDir = Path.Combine(env.WebRootPath ?? Path.Combine(env.ContentRootPath, "wwwroot"), "videos");
+if (!Directory.Exists(videosDir))
+{
+    Directory.CreateDirectory(videosDir);
+}
+
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseStaticFiles();
 app.UseRouting();
 app.UseHttpsRedirection();
 app.UseExceptionHandler("/error");

@@ -13,46 +13,44 @@ public class AgriSmartContext : DbContext
     public DbSet<Crop> Crops { get; set; }
     public DbSet<PestDiagnosis> PestDiagnoses { get; set; }
     public DbSet<SoilPrediction> SoilPredictions { get; set; }
-    public DbSet<FarmSize> FarmSizes { get; set; }
-    public DbSet<WaterManagement> WaterManagements { get; set; }
-    public DbSet<FertilizerPesticideCalculation> FertilizerPesticideCalculations { get; set; }
-    public DbSet<MarketPrice> MarketPrices { get; set; }
-    public DbSet<MarketplaceListing> MarketplaceListings { get; set; }
-    public DbSet<GroupSale> GroupSales { get; set; }
-    public DbSet<Microloan> Microloans { get; set; }
-    public DbSet<CropInsurance> CropInsurances { get; set; }
-    public DbSet<OrganicFarmingGuide> OrganicFarmingGuides { get; set; }
-    public DbSet<AgroforestryGuide> AgroforestryGuides { get; set; }
-    public DbSet<ForumPost> ForumPosts { get; set; }
-    public DbSet<ExpertQA> ExpertQAs { get; set; }
-    public DbSet<TrainingContent> TrainingContents { get; set; }
-    public DbSet<VirtualFieldSchool> VirtualFieldSchools { get; set; }
-    public DbSet<InputSupplier> InputSuppliers { get; set; }
-    public DbSet<InputOrder> InputOrders { get; set; }
-    public DbSet<FarmProductivity> FarmProductivities { get; set; }
-    public DbSet<SustainabilityReport> SustainabilityReports { get; set; }
-    public DbSet<Partnership> Partnerships { get; set; }
-    public DbSet<LocalizationContent> LocalizationContents { get; set; }
-    public DbSet<FarmerTrainingSession> FarmerTrainingSessions { get; set; }
+   
+    public DbSet<ForumPost> ForumPosts { get; set; } 
+    public DbSet<ForumComment> ForumComments { get; set; } 
+    public DbSet<Expert> Experts { get; set; } 
+    public DbSet<Tutorial> Tutorials { get; set; } 
+    public DbSet<Product> Products { get; set; } 
+    public DbSet<Cart> Carts { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Order> Orders { get; set; }
+
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<LocalizationContent>()
-            .Property(l => l.LocalizedContent)
-            .HasConversion(
-                v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions)null),
-                v => System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, string>>(v, (System.Text.Json.JsonSerializerOptions)null));
+        modelBuilder.Entity<ForumComment>()
+            .HasOne(c => c.Post)
+            .WithMany(p => p.Comments)
+            .HasForeignKey(c => c.PostId)
+            .OnDelete(DeleteBehavior.Cascade);
         
-        modelBuilder.Entity<ForumPost>()
-            .Property(f => f.Replies)
-            .HasConversion(
-                v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions)null),
-                v => System.Text.Json.JsonSerializer.Deserialize<List<string>>(v, (System.Text.Json.JsonSerializerOptions)null));
+        modelBuilder.Entity<Cart>()
+            .HasOne(c => c.Product)
+            .WithMany()
+            .HasForeignKey(c => c.ProductId)
+            .OnDelete(DeleteBehavior.Cascade);
 
-        modelBuilder.Entity<InputSupplier>()
-            .Property(i => i.Reviews)
-            .HasConversion(
-                v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions)null),
-                v => System.Text.Json.JsonSerializer.Deserialize<List<string>>(v, (System.Text.Json.JsonSerializerOptions)null));
+        modelBuilder.Entity<Cart>()
+            .HasIndex(c => new { c.UserId, c.ProductId })
+            .HasDatabaseName("IX_Cart_User_Product")
+            .IsUnique(false);
+        
+        modelBuilder.Entity<Product>()
+            .HasOne(p => p.Category)
+            .WithMany(c => c.Products)
+            .HasForeignKey(p => p.CategoryId)
+            .OnDelete(DeleteBehavior.SetNull);
+
+
+
+        
     }
 }
